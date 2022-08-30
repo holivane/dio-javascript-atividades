@@ -1,6 +1,6 @@
 function verificaPalindromoPalavra(stringParaVerificar) {
   if (!stringParaVerificar) {
-    return "Envie uma ";
+    return "Envie uma string";
   }
   let stringRevertida = stringParaVerificar
     .split("")
@@ -19,4 +19,4 @@ console.log(verificaPalindromoPalavra("ovo"));
 console.log(verificaPalindromoPalavra("roma me tem amor"));
 console.log(verificaPalindromoPalavra("gato"));
 console.log(verificaPalindromoPalavra("ovo e ovo"));
-
+console.log(verificaPalindromoPalavra(""))
