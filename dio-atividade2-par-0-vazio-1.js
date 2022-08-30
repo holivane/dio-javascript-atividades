@@ -13,5 +13,7 @@ function trocaPares(arrayNumeros) {
 
 console.log(trocaPares([1, 0, 9, 7, 3, 4, 5, 6, 7]));
 console.log(trocaPares([]));
+console.log(trocaPares(null));
+console.log(trocaPares(undefined));
 console.log(trocaPares());
 console.log(trocaPares("ana"));
