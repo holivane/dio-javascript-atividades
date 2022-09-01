@@ -1,155 +1,97 @@
-// ======Variáveis======
-
-var escopoGlobal = "global";
-var myNum = 3;
-var arrayExemplo = [0, 1, 2, 3, 4];
-console.log(escopoGlobal);
-console.log("============== Imprime variável global ^ ===============")
-
-function escopoLocal() {
-  let escopoLocalInterno = "palavra";
-  console.log(escopoLocalInterno);
-}
-escopoLocal();
-console.log("============== Imprime variável local ^ ===============")
-
-// ======Vetores ou Arrays======
-
-let array = ['palavra', 2, true, "cobra", ['array1']]
-console.log(array)
-console.log("============== Imprime Valores do Array ^ ===============")
-console.log(array[0][0])
-console.log("============== Imprime Valor específico ^ ===============")
-
-// indexOf
-console.log(array.indexOf(true))
-console.log("============= indexOf ^ ================")
-
-// forEach
-array.forEach( item => console.log(item))
-console.log(array)
-console.log("============= For Each ^ ================")
-
-// push
-array.push('abacaxi', 'canela', 4, 5, 6)
-console.log(array)
-console.log("============= Push ^ 'abacaxi', 'canela', 4, 5, 6 ================")
-
-// pop
-array.pop()
-console.log(array)
-console.log("============= Pop ^ ================")
-
-// shift
-array.shift()
-console.log(array)
-console.log("============= Shift ^ ================")
-
-// unshift
-array.unshift('novo item no inicio')
-console.log(array)
-console.log("============= Unshift ^ ================")
-
-// splice
-array.splice(1, 3)
-console.log(array)
-console.log("============= splice de 1, 3 ^ ================")
-
-// slice
-let novoArray = array.slice(1, 3)
-console.log(novoArray)
-console.log("============= slice de 1, 3 ^ ================")
-
 // ======Manipulando objetos======
 
-// let objetos = {
-//   palavra: "palavra",
-//   numero: 10,
-//   boleano: true,
-//   arrayExemplo: ['array'],
-//   outroObjeto: {
-//     novoObjeto: "objeto interno",
-//     novoNumero: 20,
-//     novoBoleano: false,
-//   },
-// };
-
-// console.log(objetos);
-// console.log(objetos.numero);
-// console.log(objetos.outroObjeto);
-// console.log(objetos.outroObjeto.novoNumero);
-// let testString = objetos.palavra
-// console.log(testString)
-// let testArray = objetos.arrayExemplo[0][4]
-// console.log(testArray)
+let objetos = {
+  palavra: "palavra",
+  numero: 10,
+  boleano: true,
+  arrayExemplo: ["array"],
+  outroObjeto: {
+    novoObjeto: "objeto interno",
+    novoNumero: 20,
+    novoBoleano: false,
+  },
+};
+console.log(objetos);
+console.log("============= Objeto ^ ================");
+console.log(objetos.numero);
+console.log("============= Chave 'número' ^ ================");
+console.log(objetos.outroObjeto);
+console.log("============= Chave 'objeto interno' ^ ================");
+console.log(objetos.outroObjeto.novoNumero);
 
 // ======Estruturas condicionais======
 
-// // IF
-// var jogador1 = 0;
-// var jogador2 = 0;
+// IF
+var jogador1 = 0;
+var jogador2 = 0;
 
-// jogador1 >= 0 && jogador2 >=0 ? console.log('Os jogadores são válidos') : console.log('Os jogadores são inválidos')
+jogador1 >= 0 && jogador2 >= 0
+  ? console.log("Os jogadores são válidos")
+  : console.log("Os jogadores são inválidos");
 
-// if(jogador1 > 0){
-//     console.log('Jogador 1 marcou ponto')
-//     placar = jogador1 > jogador2
-// } else if (jogador2 >0 ) {
-//     console.log('Jogador 2 marcou ponto')
-//     placar = jogador2 > jogador1
-// } else {
-//     placar = jogador2 = jogador1
-//     console.log("Ninguém marcou ponto")
-// }
+if (jogador1 > 0) {
+  console.log("Jogador 1 marcou ponto");
+  placar = jogador1 > jogador2;
+} else if (jogador2 > 0) {
+  console.log("Jogador 2 marcou ponto");
+  placar = jogador2 > jogador1;
+} else {
+  placar = jogador2 = jogador1;
+  console.log("Ninguém marcou ponto");
+}
+console.log("============= If para pontos ^ ================");
 
-// //SWITCH/CASE
+//SWITCH/CASE
 
-// switch(placar){
-//     case placar = jogador1 > jogador2:
-//     console.log('Jogador 1 ganhou')
-//     break
-//     case placar = jogador1 < jogador2:
-//     console.log('Jogador 2 ganhou')
-//     break
-//     default:
-//     console.log("Ninguém ganhou")
-// }
+switch (placar) {
+  case (placar = jogador1 > jogador2):
+    console.log("Jogador 1 ganhou");
+    break;
+  case (placar = jogador1 < jogador2):
+    console.log("Jogador 2 ganhou");
+    break;
+  default:
+    console.log("Ninguém ganhou");
+}
 
+console.log("============= Switch Case para vitória ^ ================");
 // FOR
 
-// let array = ["valor1", "valor2", "valor3", "valor4", "valor5"];
+let array = ["valor1", "valor2", "valor3", "valor4", "valor5"];
 
-// for (let indice = 0; indice < array.length; indice++) {
-//     console.log(array[indice]);
-//     console.log(indice);
-// }
+for (let indice = 0; indice < array.length; indice++) {
+  console.log(indice);
+}
+console.log("============= For ^ ================");
 
-// for(let i in array) {
-//     console.log(array[i])
-// // }
+for (i in array) {
+  console.log(i);
+}
+console.log("============= For in ^ ================");
 
-// for(i of array) {
-//     console.log(i)
-// }
+for (i of array) {
+  console.log(i);
+}
+console.log("============= For of ^ ================");
 
-// let array2 = ['a', 'b', 'c', 'd', 'e']
-// let pegaElemento = array2.at(3)
-// console.log(pegaElemento)
+let array2 = ["a", "b", "c", "d", "e"];
+let pegaElemento = array2.at(3);
+console.log(array2);
+console.log(pegaElemento);
+console.log("============= Array.at 3 ^ ================");
 
 //WHILE
-
-// var a = 0;
-
-// while (a < 10) {
-//   console.log(a);
-//   a++;
-// }
+var a = 0;
+while (a < 4) {
+  console.log(a);
+  a++;
+}
+console.log("============= While ^ ================");
 
 // DO WHILE
-
-// var a = 0;
-
-// do {
-//     a++;
-//     console.log(a);
-// } while (a < 10);
+var a = 0;
+do {
+  console.log(a);
+  a++;
+} while (a < 4);
+console.log("============= Do While ^ ================");
