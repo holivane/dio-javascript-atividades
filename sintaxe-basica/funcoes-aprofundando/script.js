@@ -1,22 +1,19 @@
-// Tipos de funções 
+// Tipos de funções
 
-// //Declarativas
-// function funcaoDeclarativa () {
-//     console.log("Sou uma mensagem de uma função declarativa")
-// }
+//Declarativas
+function funcaoDeclarativa() {
+  console.log("Sou uma mensagem de uma função declarativa");
+}
+funcaoDeclarativa();
 
-// funcaoDeclarativa()
+// Expressão de funçaõ
+var funcao = function () {
+  console.log("Sou uma mensagem de uma função de expressão");
+};
+funcao();
 
-// // Expressão de funçaõ
-// var funcao = function(){
-//     console.log("Sou uma mensagem de uma função de expressão")
-// }
-
-// funcao()
-
-// //Arrow function
-// var funcao = () => {
-//     console.log("Sou uma arrow function")
-// }
-
-// funcao()
+//Arrow function
+var funcaoArrow = () => {
+  console.log("Sou uma arrow function");
+};
+funcaoArrow();
